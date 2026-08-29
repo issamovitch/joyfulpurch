@@ -26,11 +26,11 @@ const clients = [
     sector: "Home Decor & Furniture",
   },
   {
-    slug: "nordichome",
-    name: "Nordic Home",
+    slug: "wewood",
+    name: "Wewood",
     tagline:
-      "Scandinavian-inspired minimalist furniture for modern living spaces.",
-    website: "#",
+        "Handcrafted Portuguese solid wood furniture since 1964.",
+    website: "https://www.wewood.eu",
     sector: "Furniture",
   },
   {
