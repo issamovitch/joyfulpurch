@@ -113,6 +113,8 @@ function ModelViewerCard({
               ar
               camera-controls
               auto-rotate
+              loading="lazy"
+              reveal="auto"
               shadow-intensity="0.4"
               exposure="1.1"
               poster={posterUrl || undefined}

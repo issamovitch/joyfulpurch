@@ -34,20 +34,12 @@ const clients = [
     sector: "Furniture",
   },
   {
-    slug: "ceramica",
-    name: "Ceramica Studio",
+    slug: "duistt",
+    name: "Duistt",
     tagline:
-      "Handmade ceramic tableware and decorative pieces artisan-produced in Southern Europe.",
-    website: "#",
-    sector: "Tableware & Decor",
-  },
-  {
-    slug: "luz",
-    name: "Luz Lighting",
-    tagline:
-      "Contemporary pendant lamps and sculptural fixtures for residential and hospitality projects.",
-    website: "#",
-    sector: "Lighting",
+        "Portuguese high-end furniture blending traditional craftsmanship with contemporary design. Handmade in Porto since 2014.",
+    website: "https://duistt.com",
+    sector: "Furniture",
   },
 ];
 
@@ -102,8 +94,9 @@ export default function DemosPage() {
                 key={client.slug}
                 variants={fadeUp}
                 custom={i + 2}
+                className="h-full"
               >
-                <Link href={`/demos/${client.slug}`} className="group block">
+                <Link href={`/demos/${client.slug}`} className="group block h-full">
                   <div className="relative h-full rounded-2xl border border-border/60 bg-card shadow-sm hover:shadow-lg transition-all overflow-hidden">
                     {/* Visual header strip */}
                     <div className="h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent flex items-center justify-center">
