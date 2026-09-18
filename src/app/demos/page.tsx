@@ -41,6 +41,14 @@ const clients = [
     website: "https://duistt.com",
     sector: "Furniture",
   },
+  {
+    slug: "mercadodamadeira",
+    name: "Mercado da Madeira",
+    tagline:
+        "Solid wood tables and furniture made in Portugal using traditional carpentry methods.",
+    website: "https://www.mercadodamadeira.pt",
+    sector: "Furniture",
+  },
 ];
 
 const fadeUp = {
