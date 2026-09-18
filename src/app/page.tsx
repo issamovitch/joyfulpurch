@@ -297,32 +297,40 @@ export default function HomePage() {
             >
               Real products, real 3D models — product 3D models for ecommerce, ready to embed on any storefront.
             </motion.p>
-
             <motion.div
-              variants={slideUp}
-              custom={2}
-              className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
+                variants={slideUp}
+                custom={2}
+                className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
             >
               {[
-                { name: "Nightstand", alt: "3D furniture model of wooden nightstand for ecommerce" },
-                { name: "Pendant Lamp", alt: "Interactive 3D pendant lamp model for online store" },
-                { name: "Accent Chair", alt: "3D accent chair model with 360 product spin for furniture store" },
-                { name: "Sideboard", alt: "GLB 3D model of wooden sideboard for furniture brand" },
-                { name: "Planter", alt: "3D product visualization of ceramic planter for ecommerce" },
+                { name: "Bedside Table", glb: "/GLB/wewood/Criado-Mudo Bedside Table Light.glb", alt: "3D furniture model of wooden bedside table for ecommerce" },
+                { name: "Cabinet", glb: "/GLB/duistt/Geometry Cabinet.glb", alt: "Interactive 3D cabinet model for online store" },
+                { name: "Lounge Chair", glb: "/GLB/wewood/Nido Lounge Chair Green.glb", alt: "3D lounge chair model with 360 product spin for furniture store" },
+                { name: "Sideboard", glb: "/GLB/wewood/Scarpa Sideboard.glb", alt: "GLB 3D model of wooden sideboard for furniture brand" },
+                { name: "Side Table", glb: "/GLB/duistt/Moon Side Table.glb", alt: "3D product visualization of side table for ecommerce" },
               ].map(
-                ({ name, alt }) => (
-                  <div
-                    key={name}
-                    className="group relative aspect-square rounded-2xl bg-gradient-to-br from-primary/5 to-primary/15 border border-border/40 overflow-hidden flex items-center justify-center hover:shadow-lg transition-shadow"
-                    role="img"
-                    aria-label={alt}
-                  >
-                    <Monitor className="h-10 w-10 text-primary/30 group-hover:text-primary/50 transition-colors" />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-3 pb-3 pt-8">
-                      <p className="text-sm font-medium text-white truncate">{name}</p>
-                    </div>
-                  </div>
-                )
+                  ({ name, glb, alt }) => (
+                      <div
+                          key={name}
+                          className="group relative aspect-square rounded-2xl bg-gradient-to-br from-primary/5 to-primary/15 border border-border/40 overflow-hidden flex items-center justify-center hover:shadow-lg transition-shadow"
+                      >
+                        {/* @ts-expect-error — <model-viewer> is a custom web element loaded via CDN */}
+                        <model-viewer
+                            src={glb}
+                            camera-controls
+                            auto-rotate
+                            loading="lazy"
+                            reveal="auto"
+                            shadow-intensity="0.3"
+                            exposure="1.1"
+                            alt={alt}
+                            style={{ width: "100%", height: "100%", backgroundColor: "#fafaf8" }}
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-3 pb-3 pt-8 pointer-events-none">
+                          <p className="text-sm font-medium text-white truncate">{name}</p>
+                        </div>
+                      </div>
+                  )
               )}
             </motion.div>
 
