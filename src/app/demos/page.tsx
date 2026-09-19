@@ -49,6 +49,14 @@ const clients = [
     website: "https://www.mercadodamadeira.pt",
     sector: "Furniture",
   },
+  {
+    slug: "mo-ow",
+    name: "MO-OW",
+    tagline:
+        "Handcrafted furniture made in a centennial factory in northern Portugal using traditional woodworking techniques.",
+    website: "https://www.mo-ow.com",
+    sector: "Furniture",
+  },
 ];
 
 const fadeUp = {
