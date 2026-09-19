@@ -16,12 +16,13 @@ import { ArrowUpRight } from "lucide-react";
    - website: Their real website URL (opens in new tab)
    - sector: Industry tag shown as a badge
    ────────────────────────────────────────────────────────────────────── */
+
 const clients = [
   {
     slug: "damportugal",
     name: "DAM Portugal",
     tagline:
-      "Design furniture, accessories and textiles for eco-friendly homes. Ethically crafted in Portugal.",
+        "Design furniture, accessories and textiles for eco-friendly homes. Ethically crafted in Portugal.",
     website: "https://shop.damportugal.com",
     sector: "Home Decor & Furniture",
   },
@@ -31,7 +32,7 @@ const clients = [
     tagline:
         "Handcrafted Portuguese solid wood furniture since 1964.",
     website: "https://www.wewood.eu",
-    sector: "Furniture",
+    sector: "Solid Wood Furniture",
   },
   {
     slug: "duistt",
@@ -39,7 +40,7 @@ const clients = [
     tagline:
         "Portuguese high-end furniture blending traditional craftsmanship with contemporary design. Handmade in Porto since 2014.",
     website: "https://duistt.com",
-    sector: "Furniture",
+    sector: "Luxury Furniture",
   },
   {
     slug: "mercadodamadeira",
@@ -47,7 +48,7 @@ const clients = [
     tagline:
         "Solid wood tables and furniture made in Portugal using traditional carpentry methods.",
     website: "https://www.mercadodamadeira.pt",
-    sector: "Furniture",
+    sector: "Tables & Solid Wood",
   },
   {
     slug: "mo-ow",
@@ -55,7 +56,15 @@ const clients = [
     tagline:
         "Handcrafted furniture made in a centennial factory in northern Portugal using traditional woodworking techniques.",
     website: "https://www.mo-ow.com",
-    sector: "Furniture",
+    sector: "Design Furniture",
+  },
+  {
+    slug: "totalcenter",
+    name: "Total Center",
+    tagline:
+        "Handcrafted solid pine furniture made in Portugal. Tables, benches, dressers and shelving for home and hospitality.",
+    website: "https://loja.totalcenter.pt",
+    sector: "Furniture & Hospitality",
   },
 ];
 
@@ -164,7 +173,7 @@ export default function DemosPage() {
           <motion.div
             variants={fadeUp}
             custom={clients.length + 3}
-            className="mt-16 text-center"
+            className="mt-40 text-center"
           >
             <p className="text-sm text-muted-foreground">
               Want your products here?{" "}
