@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { Box, Menu, X } from "lucide-react";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import Image from 'next/image';
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,6 +14,7 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-[#0e0f13] border-b border-white/[0.06]">
@@ -31,7 +33,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors"
+              className={ (pathname === link.href ? "text-white" : "text-white/60") + " text-sm font-medium hover:text-white transition-colors"}
             >
               {link.label}
             </Link>
@@ -56,7 +58,7 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/60 hover:text-white transition-colors py-1"
+                className={ (pathname === link.href ? "text-white" : "text-white/60") + " text-sm font-medium hover:text-white transition-colors py-1"}
                 onClick={() => setOpen(false)}
               >
                 {link.label}

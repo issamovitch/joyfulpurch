@@ -5,6 +5,8 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+
 
 /* ──────────────────────────────────────────────────────────────────────
    CLIENT GALLERY CONFIG
@@ -122,16 +124,16 @@ export default function DemosPage() {
                 className="h-full"
               >
                 <Link href={`/demos/${client.slug}`} className="group block h-full">
-                  <div className="relative h-full rounded-2xl border border-border/60 bg-card shadow-sm hover:shadow-lg transition-all overflow-hidden">
-                    {/* Visual header strip */}
-                    <div className="h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent flex items-center justify-center">
-                      <span className="text-5xl font-extrabold text-primary/15 select-none group-hover:text-primary/25 transition-colors">
-                        {client.name
-                          .split(" ")
-                          .map((w) => w[0])
-                          .join("")}
-                      </span>
-                    </div>
+                  <div className="relative h-full rounded-2xl border border-border/60 bg-card shadow-lg hover:shadow-xl transition-all overflow-hidden">
+                      {/* Visual header strip */}
+                      <div className="relative h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent">
+                          <Image
+                              src={"/GLB/" + client.slug +"/logo.png"}
+                              alt={client.name}
+                              fill
+                              className="object-cover mix-blend-multiply"
+                          />
+                      </div>
 
                     {/* Card body */}
                     <div className="p-5">
