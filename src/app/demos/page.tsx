@@ -68,6 +68,14 @@ const clients = [
     website: "https://loja.totalcenter.pt",
     sector: "Furniture & Hospitality",
   },
+    {
+      slug: "casadopinho",
+        name: "Casa do Pinho",
+        tagline:
+            "Solid pine furniture built with traditional dovetail joinery since 2002. Made to measure in Miranda do Douro, raw or painted.",
+        website: "https://www.casadopinho.com",
+        sector: "Pine Furniture",
+    },
 ];
 
 const fadeUp = {
